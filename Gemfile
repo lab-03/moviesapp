@@ -17,6 +17,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "brakeman", require: false
   gem "annotate"
   gem "web-console"
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
