@@ -20,3 +20,8 @@ group :development do
   gem "web-console"
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
+
+group :test do
+  gem "selenium-webdriver"
+  gem "capybara"
+end
