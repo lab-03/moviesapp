@@ -14,12 +14,7 @@
 #  index_movies_on_lower_title  (lower((title)::text)) UNIQUE
 #
 class Movie < ApplicationRecord
-  has_many :reviews, dependent: :destroy do
-    def average_rating
-      average(:stars).to_f
-    end
-  end
-
+  has_many :reviews, dependent: :destroy
   has_many :movie_directors, dependent: :destroy
   has_many :directors, through: :movie_directors
 
