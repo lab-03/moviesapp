@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= content_for?(:title) ? strip_tags(yield(:title)) : "Moviesapp" %></title>
+    <title><%= content_for?(:title) ? strip_tags(yield(:title)) : "Movies App" %></title>
     <meta name="apple-mobile-web-app-title" content="Moviesapp">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5 flex bg-gray-100">
       <%= yield %>
     </main>
   </body>

@@ -26,5 +26,23 @@ class Movie < ApplicationRecord
   has_many :movie_countries, dependent: :destroy
   has_many :countries, through: :movie_countries
 
-  validates :title, presence: true, uniqueness: { case_sensitive: false }
+  validates :title, presence: true, uniqueness: {case_sensitive: false}
+
+  scope :by_actor_name, ->(name) { where(id: MovieActor.by_actor_name(name).select(:movie_id)) }
+
+  def name
+    title
+  end
+
+  def actor_names
+    actors.map(&:name).join(", ")
+  end
+
+  def director_names
+    directors.map(&:name).join(", ")
+  end
+
+  def country_names
+    countries.map(&:name).join(", ")
+  end
 end

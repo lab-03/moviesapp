@@ -21,4 +21,6 @@
 class MovieActor < ApplicationRecord
   belongs_to :movie
   belongs_to :actor
+
+  scope :by_actor_name, ->(name) { where(actor_id: Actor.by_name(name).select(:id)) }
 end
