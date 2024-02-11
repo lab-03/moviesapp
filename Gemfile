@@ -10,12 +10,14 @@ gem "rails", "~> 7.1.3"
 gem "sprockets-rails"
 gem "tailwindcss-rails"
 gem "tzinfo-data", platforms: %i[windows jruby]
+gem "pagy"
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "rspec-rails"
+  gem 'faker'
   gem 'pry-rails'
 end
 

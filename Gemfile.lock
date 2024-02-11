@@ -123,6 +123,8 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
+    faker (3.2.3)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -174,6 +176,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
+    pagy (6.4.3)
     parallel (1.24.0)
     parser (3.3.0.5)
       ast (~> 2.4.1)
@@ -344,7 +347,9 @@ DEPENDENCIES
   dotenv-rails
   error_highlight (>= 0.4.0)
   factory_bot_rails
+  faker
   importmap-rails
+  pagy
   pg (~> 1.1)
   pry-rails
   puma (>= 5.0)
