@@ -21,4 +21,6 @@
 class MovieCountry < ApplicationRecord
   belongs_to :movie
   belongs_to :country
+
+  validates :country_id, uniqueness: { scope: :movie_id }
 end

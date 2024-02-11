@@ -21,4 +21,6 @@
 class MovieDirector < ApplicationRecord
   belongs_to :movie
   belongs_to :director
+
+  validates :director_id, uniqueness: { scope: :movie_id }
 end

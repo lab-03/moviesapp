@@ -23,4 +23,6 @@ class MovieActor < ApplicationRecord
   belongs_to :actor
 
   scope :by_actor_name, ->(name) { where(actor_id: Actor.by_name(name).select(:id)) }
+
+  validates :actor_id, uniqueness: { scope: :movie_id }
 end
